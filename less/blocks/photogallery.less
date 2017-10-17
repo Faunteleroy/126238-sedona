@@ -1,7 +1,32 @@
-.photogallery__gallery {
+.photogallery__list {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.photogallery__slogan {
+  .font-normal;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .photogallery__slogan {
+    width: 440px;
+    margin: 0 auto;
+    line-height: 24px;
+  }
+
+  .photogallery__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photogallery__list {
+    margin: 0;
+  }
 }

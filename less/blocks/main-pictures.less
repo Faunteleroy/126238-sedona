@@ -1,17 +1,27 @@
-.index-main {
+.main-pictures {
   width: 320px;
   margin: 0 auto;
   padding: 0;
 }
 
+.main-pictures__title {
+  .font-bold;
+  text-align: center;
+}
+
 @media (min-width: @tablet-width) {
-  .index-main {
+  .main-pictures {
     width: @tablet-width;
+
+    &__title {
+      font-size: 30px;
+      line-height: 26px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .index-main {
+  .main-pictures {
     width: @desktop-width;
   }
 }

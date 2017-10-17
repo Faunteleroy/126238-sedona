@@ -9,6 +9,7 @@
   margin: 10px;
   padding: 0;
   .font-normal;
+  line-height: 24px;
   text-align: center;
 }
 
@@ -19,7 +20,7 @@
   text-align: center;
 }
 
-.search-hotel__form {
+.search-hotel__btn {
   display: block;
   margin: 0 auto;
   padding: 15px 20px;
@@ -30,3 +31,14 @@
   background-color: @bg-blue;
 }
 
+@media (min-width: @tablet-width) {
+  .search-hotel {
+    padding: 50px 140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-hotel {
+    padding: 50px 360px;
+  }
+}
