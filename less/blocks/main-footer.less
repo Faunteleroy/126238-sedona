@@ -7,7 +7,7 @@
   background-color: #fff;
 }
 
-.main-footer__teg {
+.main-footer__tag {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -17,4 +17,20 @@
 
 .main-footer__made-in {
   .font-normal;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    flex-direction: row;
+    width: @tablet-width;
+    padding: 35px 60px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer {
+    width: @desktop-width;
+    padding: 35px 130px;
+  }
 }

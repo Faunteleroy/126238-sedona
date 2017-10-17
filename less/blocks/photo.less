@@ -3,7 +3,7 @@
   padding: 15px;
 }
 
-.photo__item {
+.photo__image {
   margin: 0;
   padding: 0;
 }
@@ -24,10 +24,44 @@
   text-transform: none;
 }
 
-.photo__like-counter {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: bold;
-  font-family: "PT Sans", "Verdana", sans-serif;
-  text-transform: uppercase;
+@media (min-width: @tablet-width) {
+  .photo {
+    width: 324px;
+    padding: 0;
+  }
+
+  .photo--popular {
+    width: 648px;
+    height: 402px;
+    box-sizing: border-box;
+  }
+
+  .photo__image img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .photo__description-wrap {
+    background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    position: relative;
+    width: 400px;
+    box-sizing: border-box;
+  }
+
+  .photo--popular {
+    width: 1200px;
+    height: 402px;
+  }
+
+  .photo__description-wrap {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(242, 242, 242, 0.5);
+  }
 }

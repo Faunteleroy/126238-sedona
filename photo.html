@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: Фото</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -13,7 +14,7 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item  site-list__item--active">
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
@@ -28,96 +29,117 @@
         </ul>
       </nav>
     </header>
-    <main class="photo-main">
+    <main class="main-pictures">
       <section class="intro">
         <h2 class="intro__logo">Sedona</h2>
       </section>
-      <h1 class="photo-main__title">Фото и видео</h1>
+      <h1 class="main-pictures__title">Фото и видео</h1>
       <section class="photogallery">
-        <h2 class="visibly-hidden">Фото</h2>
+        <h2 class="visibly-hidden">Фотогалерея</h2>
         <p class="photogallery__slogan">Не можете решиться на путешествие из-за курса? Фотографии помогут забыть вам о политике и экономике.</p>
-        <ul class="photogallery__gallery">
+        <ul class="photogallery__list">
           <li>
-            <article class="photo">
-              <figure class="photo__item">
+            <article class="photo photo--popular">
+              <figure class="photo__image">
                 <img src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" class="photo__img" width="290" height="280">
               </figure>
-              <h3 class="photo__title">Неродные просторы</h3>
-              <p class="photo__author">Автор фото: Борис</p>
-              <button class="photo__like" type="button"></button>
-              <p class="photo__like-counter">1350</p>
+              <div class="photo__description-wrap">
+                <h3 class="photo__title">Неродные просторы</h3>
+                <p class="photo__author">Автор фото: Борис</p>
+                <div class="like">
+                  <button class="like__button" type="button"></button>
+                  <p class="like__counter">1350</p>
+                </div>
+              </div>
             </article>
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__item">
+              <figure class="photo__image">
                 <img src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" class="photo__img" width="290" height="280">
               </figure>
-              <h3 class="photo__title">Местная растительность</h3>
-              <p class="photo__author">Автор фото: Сергей</p>
-              <button class="photo__like" type="button"></button>
-              <p class="photo__like-counter">143</p>
+              <div class="photo__description-wrap">
+                <h3 class="photo__title">Местная растительность</h3>
+                <p class="photo__author">Автор фото: Сергей</p>
+                <div class="like">
+                  <button class="like__button" type="button"></button>
+                  <p class="like__counter">143</p>
+                </div>
+              </div>
             </article>
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__item">
+              <figure class="photo__image">
                 <img src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" class="photo__img" width="290" height="280">
               </figure>
-              <h3 class="photo__title">Дорога на север</h3>
-              <p class="photo__author">Автор фото: Петр</p>
-              <button class="photo__like" type="button"></button>
-              <p class="photo__like-counter">96</p>
+              <div class="photo__description-wrap">
+                <h3 class="photo__title">Дорога на север</h3>
+                <p class="photo__author">Автор фото: Петр</p>
+                <div class="like">
+                  <button class="like__button" type="button"></button>
+                  <p class="like__counter">96</p>
+                </div>
+              </div>
             </article>
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__item">
+              <figure class="photo__image">
                 <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" class="photo__img" width="290" height="280">
               </figure>
-              <h3 class="photo__title">Мост дьявола</h3>
-              <p class="photo__author">Автор фото: Антон</p>
-              <button class="photo__like" type="button"></button>
-              <p class="photo__like-counter">254</p>
+              <div class="photo__description-wrap">
+                <h3 class="photo__title">Мост дьявола</h3>
+                <p class="photo__author">Автор фото: Антон</p>
+                <div class="like">
+                  <button class="like__button" type="button"></button>
+                  <p class="like__counter">254</p>
+                </div>
+              </div>
             </article>
           </li>
         </ul>
       </section>
-      <section class="videoblock">
+      <section class="video">
         <h2 class="visibly-hidden">Видео</h2>
-        <p class="videoblock__description"><strong class="videoblock__strong">Все еще сомневаетесь?</strong> Смотрите видеопрезентацию и скорее за билетам, пока они не подорожали в очередной раз!</p>
-        <section class="video">
-          <h3 class="visibly-hidden">Видеоплеер</h3>
+        <p class="video__description">
+          <strong class="video__strong">Все еще сомневаетесь?</strong>
+          Смотрите видеопрезентацию и скорее за билетам, пока они не подорожали в очередной раз!
+        </p>
+        <div class="video__pleer">
           <img class="video__img" src="img/video-mobile@1x.jpg" alt="Видео Седоны" width="320" height="200">
-          <div class="video__control">
-            <div class="video__scale"></div>
-            <div class="video__toggle"></div>
+          <div class="video__panel">
+            <div class="video__control">
+              <div class="video__scale"></div>
+              <div class="video__toggle"></div>
+            </div>
+            <div class="video__buttons">
+              <button class="video__review" type="button"></button>
+              <button class="video__cc" type="button"></button>
+              <button class="video__full-screen" type="button"></button>
+            </div>
           </div>
-          <div class="video__buttons">
-            <button class="video__review" type="button"></button>
-            <button class="video__cc" type="button"></button>
-            <button class="video__full-screen" type="button"></button>
-          </div>
-        </section>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
-      <p class="main-footer__teg">#visitsedona</p>
+      <p class="main-footer__tag">#visitsedona</p>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--twitter button" href="#">Twitter</a>
+          <a class="social__link  social__link--twitter button" href="#">Twitter</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook button" href="#">Facebook</a>
+          <a class="social__link  social__link--facebook button" href="#">Facebook</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube button" href="#">Youtube</a>
+          <a class="social__link  social__link--youtube button" href="#">Youtube</a>
         </li>
       </ul>
-      <p class="main-footer__made-in">Разработано
-      <a class="main-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="#" alt="HTML Academy" width="50" height="50">
-      </a>
+      <p class="main-footer__made-in">
+        Разработано
+        <a class="main-footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="#" alt="HTML Academy" width="50" height="50">
+        </a>
       </p>
     </footer>
   </body>

@@ -1,11 +1,35 @@
 .intro {
-  min-height: 175px;
+  height: 175px;
   margin: 0;
   padding: 0;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50%;
 
   &--index {
-    min-height: 385px;
+    height: 385px;
   }
 }
 
+.intro__logo {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+
+  .intro {
+    height: 290px;
+  }
+
+  .intro--index {
+    height: 518px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    height: 300px;
+  }
+
+  .intro--index {
+    height: 518px;
+  }
+}

@@ -9,10 +9,110 @@
 
 .form__label-text,
 .form__label-contact {
+  margin-right: 13px;
   .font-normal;
+  cursor: pointer;
 }
 
 .form__label-radio,
 .form__label-check {
   text-transform: none;
+}
+
+.form__fieldset {
+  padding-bottom: 20px;
+}
+
+.form__field-wrap {
+  display: flex;
+  align-items: baseline;
+  margin: 20px 20px 0 20px;
+
+  &--contact {
+    flex-wrap: wrap;
+  }
+}
+
+.form__input-text {
+  width: 100%;
+  padding: 20px 22px;
+  .font-bold;
+  text-transform: none;
+  color: #000000;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.form__input-contact {
+  width: 100%;
+  padding: 20px 22px;
+  .font-bold;
+  text-transform: none;
+  color: #000000;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 60px;
+  }
+
+  .form__fieldset {
+    width: 100%;
+  }
+
+  .form__fieldset--mod {
+    order: -2;
+  }
+
+  .form__fieldset--short {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .form__attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__field-wrap--attraction {
+    width: 220px;
+  }
+
+  .form__fieldset--textarea {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__textarea {
+    width: 648px;
+    height: 160px;
+    margin: 20px 0;
+    color: #000000;
+    border: none;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    margin: 0 120px;
+  }
+
+  .form__textarea {
+    width: 960px;
+    }
+
+  .form__field-wrap--attraction {
+    width: 200px;
+  }
 }
