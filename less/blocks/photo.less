@@ -1,14 +1,25 @@
 .photo {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 15px;
+  padding: 18px 20px 5px 20px;
+  border-bottom: 1px solid #e5e5e5;
+
+  &--popular {
+     border-top: 1px solid #e5e5e5;
+  }
 }
 
-.photo__image {
+.photo__link {
+  display: flex;
+  width: 280px;
   margin: 0;
   padding: 0;
 }
 
 .photo__title {
+  margin: 0;
+  margin-top: 8px;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
@@ -17,6 +28,7 @@
 }
 
 .photo__author {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -28,21 +40,37 @@
   .photo {
     width: 324px;
     padding: 0;
+
+    &--full-screen {
+      width: 648px;
+      box-sizing: border-box;
+    }
   }
 
-  .photo--popular {
-    width: 648px;
-    height: 402px;
-    box-sizing: border-box;
-  }
-
-  .photo__image img {
+  .photo__link {
     width: 100%;
-    margin: 0;
+  }
+
+  .photo__img {
+    width: 324px;
+    height: 267px;
+
+    &--full-screen {
+      width: 648px;
+      height: 400px;
+    }
   }
 
   .photo__description-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 9px 20px 14px;
     background-color: #f2f2f2;
+
+    &--dark-grey {
+      background-color: #eaeaea;
+    }
   }
 }
 
@@ -51,17 +79,30 @@
     position: relative;
     width: 400px;
     box-sizing: border-box;
+
+    &--full-screen {
+      width: 1200px;
+      height: 402px;
+    }
   }
 
-  .photo--popular {
-    width: 1200px;
-    height: 402px;
+  .photo__img {
+    width: 400px;
+    height: 267px;
+
+    &--full-screen {
+      width: 1200px;
+      height: 400px;
+    }
   }
 
   .photo__description-wrap {
     position: absolute;
     width: 100%;
     bottom: 0;
-    background-color: rgba(242, 242, 242, 0.5);
+    padding: 12px 21px 14px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing:  border-box;
   }
 }

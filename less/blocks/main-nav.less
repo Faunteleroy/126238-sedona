@@ -4,8 +4,52 @@
 }
 
 .main-nav__toggle {
-  display: none;
   position: absolute;
-  margin: 0;
-  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &--open {
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &--open::before,
+  &--open::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -15px;
+    width: 28px;
+    height: 5px;
+    background-color: #ffffff;
+  }
+
+  &--open::before {
+    transform: rotate(45deg);
+  }
+
+  &--open::after {
+    transform: rotate(-45deg);
+  }
+
+  &--close {
+    top: 245px;
+    right: 18px;
+    width: 23px;
+    height: 4px;
+    background-color: @bg-blue;
+    box-shadow:
+      0 -8px 0 0 @bg-blue,
+      0 8px 0 0 @bg-blue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
 }
