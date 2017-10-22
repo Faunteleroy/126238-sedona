@@ -9,22 +9,22 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logotype-mobile.svg" width="102" height="83" alt="Sedona">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle  main-nav__toggle--open" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item  site-list__item--active">
-            <a href="index.html">Главная</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a>Фото и видео</a>
+            <a class="site-list__link  site-list__link--active">Фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
+            <a class="site-list__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -39,13 +39,15 @@
         <p class="photogallery__slogan">Не можете решиться на путешествие из-за курса? Фотографии помогут забыть вам о политике и экономике.</p>
         <ul class="photogallery__list">
           <li>
-            <article class="photo photo--popular">
-              <figure class="photo__image">
-                <img src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" class="photo__img" width="290" height="280">
-              </figure>
+            <article class="photo photo--full-screen">
+              <a class="photo__link  photo__link--full-screen">
+                <img class="photo__img  photo__img--full-screen" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="290" height="280">
+              </a>
               <div class="photo__description-wrap">
-                <h3 class="photo__title">Неродные просторы</h3>
-                <p class="photo__author">Автор фото: Борис</p>
+                <div class="photo__info">
+                  <h3 class="photo__title">Неродные просторы</h3>
+                  <p class="photo__author">Автор фото: Борис</p>
+                </div>
                 <div class="like">
                   <button class="like__button" type="button"></button>
                   <p class="like__counter">1350</p>
@@ -55,12 +57,14 @@
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__image">
+              <a class="photo__link">
                 <img src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" class="photo__img" width="290" height="280">
-              </figure>
+              </a>
               <div class="photo__description-wrap">
-                <h3 class="photo__title">Местная растительность</h3>
-                <p class="photo__author">Автор фото: Сергей</p>
+                <div class="photo__info">
+                  <h3 class="photo__title">Местная растительность</h3>
+                  <p class="photo__author">Автор фото: Сергей</p>
+                </div>
                 <div class="like">
                   <button class="like__button" type="button"></button>
                   <p class="like__counter">143</p>
@@ -70,12 +74,14 @@
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__image">
+              <a class="photo__link">
                 <img src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" class="photo__img" width="290" height="280">
-              </figure>
-              <div class="photo__description-wrap">
-                <h3 class="photo__title">Дорога на север</h3>
-                <p class="photo__author">Автор фото: Петр</p>
+              </a>
+              <div class="photo__description-wrap  photo__description-wrap--dark-grey">
+                <div class="photo__info">
+                  <h3 class="photo__title">Дорога на север</h3>
+                  <p class="photo__author">Автор фото: Петр</p>
+                </div>
                 <div class="like">
                   <button class="like__button" type="button"></button>
                   <p class="like__counter">96</p>
@@ -85,12 +91,14 @@
           </li>
           <li>
             <article class="photo">
-              <figure class="photo__image">
+              <a class="photo__link">
                 <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" class="photo__img" width="290" height="280">
-              </figure>
+              </a>
               <div class="photo__description-wrap">
-                <h3 class="photo__title">Мост дьявола</h3>
-                <p class="photo__author">Автор фото: Антон</p>
+                <div class="photo__info">
+                  <h3 class="photo__title">Мост дьявола</h3>
+                  <p class="photo__author">Автор фото: Антон</p>
+                </div>
                 <div class="like">
                   <button class="like__button" type="button"></button>
                   <p class="like__counter">254</p>
@@ -114,9 +122,9 @@
               <div class="video__toggle"></div>
             </div>
             <div class="video__buttons">
-              <button class="video__review" type="button"></button>
-              <button class="video__cc" type="button"></button>
-              <button class="video__full-screen" type="button"></button>
+              <button class="video__btn video__btn--review" type="button">Повторить просмотр</button>
+              <button class="video__btn video__btn--cc" type="button">Субтитры</button>
+              <button class="video__btn video__btn--full-screen" type="button">На весь экран</button>
             </div>
           </div>
         </div>

@@ -9,22 +9,22 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logotype-mobile.svg" width="102" height="83" alt="Sedona">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle  main-nav__toggle--open" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="index.html">Главная</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
+            <a class="site-list__link" href="photo.html">Фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a>Форма отзыва</a>
+            <a class="site-list__link  site-list__link--active">Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -39,72 +39,75 @@
           <p class="review__slogan">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="form__fieldset form__fieldset--short">
-            <h2 class="form__title">Представьтесь:</h2>
+          <div class="form__fieldset  form__fieldset--short  form__fieldset--name">
+            <h2 class="form__title  form__title--name">Представьтесь:</h2>
             <div class="form__field-wrap">
-              <label class="form__label-text" for="formfirstname">Имя*:</label>
-              <input class="form__input-text" type="text" name="firstname" id="formfirstname" value="" placeholder="Петр">
+              <label class="form__label  form__label--text" for="formfirstname">Имя*:</label>
+              <input class="form__input  form__input--text" type="text" name="firstname" id="formfirstname" value="" placeholder="Петр">
             </div>
             <div class="form__field-wrap">
-              <label class="form__label-text" for="formsurname">Фамилия*:</label>
-              <input class="form__input-text" type="text" name="surname" id="formsurname" value="" placeholder="Иванов">
+              <label class="form__label  form__label--text" for="formsurname">Фамилия*:</label>
+              <input class="form__input  form__input--text" type="text" name="surname" id="formsurname" value="" placeholder="Иванов">
             </div>
             <div class="form__field-wrap">
-              <label class="form__label-text" for="formpatronymic">Отчество:</label>
-              <input class="form__input-text" type="text" name="patronymic" id="formpatronymic" value="" placeholder="Александрович">
+              <label class="form__label  form__label--text" for="formpatronymic">Отчество:</label>
+              <input class="form__input  form__input--text" type="text" name="patronymic" id="formpatronymic" value="" placeholder="Александрович">
             </div>
           </div>
-          <div class="form__fieldset">
-            <h2 class="form__title">Контактная информация:</h2>
-            <div class="form__field-wrap  form__field-wrap--contact">
-              <label class="form__label-contact" for="tel">Контактный телефон*:</label>
-              <input class="form__input-contact" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
-            </div>
-            <div class="form__field-wrap  form__field-wrap--contact">
-              <label class="form__label-contact" for="email">Электронная почта*:</label>
-              <input class="form__input-contact" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+          <div class="form__fieldset  form__fieldset--contact">
+            <h2 class="form__title  form__title--contact">Контактная информация:</h2>
+            <div class="form__contact-flex">
+              <div class="form__field-wrap  form__field-wrap--contact">
+                <label class="form__label  form__label--contact" for="tel"><span>Контактный</span> телефон*:</label>
+                <input class="form__input  form__input--contact" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+              </div>
+              <div class="form__field-wrap  form__field-wrap--contact">
+                <label class="form__label  form__label--contact" for="email">Электронная почта*:</label>
+                <input class="form__input  form__input--contact" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              </div>
             </div>
           </div>
           <div class="form__fieldset  form__fieldset--short form__fieldset--mod">
-            <h2 class="form__title">Ваше общее впечатление:</h2>
-            <div>
-              <input class="form__input-radio" type="radio" name="impression" value="good" id="impressgood" checked>
-              <label tabindex="0" class="form__label-radio" for="impressgood">Скорее положительное</label>
+            <h2 class="form__title form__title--impression">Ваше общее впечатление:</h2>
+            <div class="form__field-wrap  form__field-wrap--impression">
+              <input class="form__radio" type="radio" name="impression" value="good" id="impressgood" checked>
+              <label tabindex="0" class="form__label--radio" for="impressgood">Скорее положительное</label>
             </div>
-            <div>
-              <input class="form__input-radio" type="radio" name="impression" value="bad" id="impressbad">
-              <label tabindex="0" class="form__label-radio" for="impressbad">Скорее отрицательное</label>
+            <div class="form__field-wrap  form__field-wrap--impression">
+              <input class="form__radio" type="radio" name="impression" value="bad" id="impressbad">
+              <label tabindex="0" class="form__label--radio" for="impressbad">Скорее отрицательное</label>
             </div>
-            <div>
-              <input class="form__input-radio" type="radio" name="impression" value="noknow" id="impressnoknow">
-              <label tabindex="0" class="form__label-radio" for="impressnoknow">Затрудняюсь ответить</label>
+            <div class="form__field-wrap  form__field-wrap--impression">
+              <input class="form__radio" type="radio" name="impression" value="noknow" id="impressnoknow">
+              <label tabindex="0" class="form__label--radio" for="impressnoknow">Затрудняюсь ответить</label>
             </div>
           </div>
-          <div class="form__fieldset">
-            <h2 class="form__title">Посещенные достопримечательности:</h2>
+          <div class="form__fieldset  form__fieldset--attraction">
+            <h2 class="form__title  form__title--attraction">Посещенные достопримечательности:</h2>
             <div class="form__attraction-list">
               <div class="form__field-wrap  form__field-wrap--attraction">
                 <input class="form__check" type="checkbox" name="bridge" id="bridge" checked>
-                <label tabindex="0" class="form__label-check" for="bridge">Мост дьявола</label>
+                <label tabindex="0" class="form__label--check" for="bridge">Мост дьявола</label>
               </div>
               <div class="form__field-wrap  form__field-wrap--attraction">
                 <input class="form__check" type="checkbox" name="park" id="park" checked>
-                <label tabindex="0" class="form__label-check" for="park">Слайд-парк</label>
+                <label tabindex="0" class="form__label--check" for="park">Слайд-парк</label>
               </div>
               <div class="form__field-wrap  form__field-wrap--attraction">
                 <input class="form__check" type="checkbox" name="bell" id="bell">
-                <label tabindex="0" class="form__label-check" for="bell">Гора-колокол</label>
+                <label tabindex="0" class="form__label--check" for="bell">Гора-колокол</label>
               </div>
               <div class="form__field-wrap  form__field-wrap--attraction">
                 <input class="form__check" type="checkbox" name="redrocks" id="redrocks" checked>
-                <label tabindex="0" class="form__label-check" for="redrocks">Красные скалы</label>
+                <label tabindex="0" class="form__label--check" for="redrocks">Красные скалы</label>
               </div>
             </div>
           </div>
           <div class="form__fieldset  form__fieldset--textarea">
-            <label class="form__label-description" for="formtextarea">Опишите свои эмоции:</label>
+            <label class="form__label--textarea" for="formtextarea">Опишите свои эмоции:</label>
             <textarea class="form__textarea" name="formtextarea" id="formtextarea" placeholder="Опишите подробно все свои восторги" required></textarea>
             <button class="form__button button" type="submit">Отправить отзыв</button>
+            <p class="form__required">* — обязательные поля</p>
           </div>
         </form>
       </section>
@@ -129,5 +132,17 @@
         </a>
       </p>
     </footer>
+      <div class="popup  popup--error">
+        <p class="popup__title">Что-то пошло не так!</p>
+        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="popup__btn  button" type="button">Ок</button>
+      </div>
+      <div class="popup  popup--sent">
+        <p class="popup__title">Ваш отзыв отправлен!</p>
+        <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="popup__button-wrap">
+          <button class="popup__btn  button" type="button">Закрыть окно</button>
+        </div>
+      </div>
   </body>
 </html>
